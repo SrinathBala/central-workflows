@@ -5,9 +5,14 @@ on:
         type: string
         required: false
         default: main
+      DISABLE_STAGE:
+        type: boolean
+        required: false
+        default: false
     secrets: 
       ROLE_TO_ASSUME:
         required: true
+    
 
 jobs:
   aws_cdk:
