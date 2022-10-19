@@ -1,4 +1,13 @@
-on: [workflow_dispatch]
+on: 
+  workflow_call:
+    inputs:
+      MAIN_BRANCH:
+        type: string
+        required: false
+        default: main
+    secrets: 
+      ROLE_TO_ASSUME:
+        required: true
 
 jobs:
   aws_cdk:
